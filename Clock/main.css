@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  background: linear-gradient(to right, hsl(198deg, 50%, 21%), hsl(177deg, 50%, 50%));
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(225, 225, 225, 0.8);
+  border-radius: 50%;
+  border: 5px solid rgb(56, 56, 56);
+  position: relative;
+  font-weight: bolder;
+}
+.clock .number,
+.clock .clock {
+  --rotation: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+}
+
+.clock .number1 {
+  --rotation:30deg;
+}
+
+.clock .number2 {
+  --rotation:60deg;
+}
+
+.clock .number3 {
+  --rotation:90deg;
+}
+
+.clock .number4 {
+  --rotation:120deg;
+}
+
+.clock .number5 {
+  --rotation:150deg;
+}
+
+.clock .number6 {
+  --rotation:180deg;
+}
+
+.clock .number7 {
+  --rotation:210deg;
+}
+
+.clock .number8 {
+  --rotation:240deg;
+}
+
+.clock .number9 {
+  --rotation:270deg;
+}
+
+.clock .number10 {
+  --rotation:300deg;
+}
+
+.clock .number11 {
+  --rotation:330deg;
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  background: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.clock .hand {
+  --rotation:0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background: black;
+  border-radius: 5px;
+  transform: translateX(-40%) rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+  z-index: 10;
+}
+
+.clock .hand.second {
+  width: 2px;
+  height: 45%;
+  background: red;
+}
+
+.clock .hand.minute {
+  width: 5px;
+  height: 40%;
+}
+
+.clock .hand.hour {
+  width: 10px;
+  height: 33%;
+}/*# sourceMappingURL=main.css.map */
